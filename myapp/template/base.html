@@ -1,90 +1,90 @@
+{% load static %}
 <!DOCTYPE html>
-[% load static %]
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=20px, initial-scale=1.0" />
-    <title>Home | WHEELS ON</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-      crossorigin="anonymous"
-      Font Awesome CDN for social icons>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    
-    <link href="static/stylesheet/style.css" rel="stylesheet" />
-  </head>
-  <body>
-
-
-    <section class="menutop">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <p>📞+91 98765 43210</p>
-          </div>
-          <div class="col-md-3">
-          <p>✉️support@wheelson.com</p>
-          </div>
-          <div class="col-md-3">
-          <p>📍Ranchi, Jharkhand, India</p>
-          </div>
-          <div class="col-md-3">
-            <p></p>
-            <div class="si">
-  <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-  <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-  <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-</div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-<!DOCTYPE html>
-<html>
 <head>
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}WHEELS ON{% endblock %}</title>
+
+  <!-- Bootstrap -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+    crossorigin="anonymous"
+  >
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
+  <!-- Top Bar -->
+  <section class="menutop">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"><p> +91 98765 43210</p></div>
+        <div class="col-md-3"><p> support@wheelson.com</p></div>
+        <div class="col-md-3"><p> Ranchi, Jharkhand, India</p></div>
+        <div class="col-md-3">
+          <div class="si">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Header -->
   <header class="main-header">
     <div class="logo-section">
-      <img src="static/img/logo.png" alt="Company Logo" class="logo">
+      <img src="{% static 'img/logo.png' %}" alt="Company Logo" class="logo">
       <span class="company-name">WHEELS ON</span>
-      
     </div>
-
     <div class="auth-links">
-      <a href="#">Login</a> / <a href="#">Register</a>
-    </div>
+  <!-- Trigger Buttons -->
+  <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#loginModal">
+    Login
+  </button>
+  /
+  <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#registerModal">
+    Register
+  </button>
+</div>
+
+
   </header>
 
-</body>
-</html>
-<nav class="navbar">
-  <ul class="nav-menu">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Gallery</a></li>
-    <li><a href="#">Contact Us</a></li>
-  </ul>
-</nav>
-
-<footer class="footer">
-  <div class="footer-container">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul class="nav-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
     
-      
-    </div>
-    <div class="ls">
-      <img src="static/img/logo.png" alt="Company Logo" class="logo">
-      
-      </div>
 
+  </nav>
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container"></div>
+    <div class="ls">
+      <img src="{% static 'img/logo.png' %}" alt="Company Logo" class="logo">
+    </div>
     <div class="footer-section">
       <h4>Quick Links</h4>
       <ul>
@@ -94,17 +94,12 @@
         <li><a href="#">FAQs</a></li>
       </ul>
     </div>
-    </footer>
+  </footer>
 
-    
   <div class="fb">
-    <div class="container">
-    </div>
-    <p>&copy;<B>2025 WHEELS ON. All rights reserved.</B></p>
-    
+    <div class="container"></div>
+    <p>&copy; <b>2025 WHEELS ON. All rights reserved.</b></p>
   </div>
 
-
-   
-  </body>
+</body>
 </html>

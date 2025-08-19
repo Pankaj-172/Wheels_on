@@ -1,33 +1,33 @@
-[% load static %]
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="static/img/img 4.png" height="800px">
-        </div>
-        <div class="carousel-item">
-          <img src="static/img/ccccccccccc.jpg" height="900px"> 
-        </div>
-        <div class="carousel-item">
-          <img src="static/img/img9.avif" height="1000">
-        </div>
-      </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'img/img 4.png' %}" class="d-block w-100" height="800px">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/ccccccccccc.jpg' %}" class="d-block w-100" height="900px"> 
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/img9.avif' %}" class="d-block w-100" height="1000px">
+    </div>
+  </div>
+</div>
 
-
-
-      <section class="cb">
+<!-- Booking Form -->
+<section class="cb">
   <div class="container">
     <h2 class="text-center mb-4">Book Your Ride</h2>
     <p class="text-center text-muted mb-5">Enter your details to schedule your car ride easily</p>
 
     <form class="bf">
       <div class="row">
-       
         <div class="col-md-6 mb-3">
           <label for="pickup-location" class="form-label">Pickup Location</label>
           <input type="text" class="form-control" id="pickup-location" placeholder="Enter pickup location" required>
         </div>
-
-        
         <div class="col-md-3 mb-3">
           <label for="pickup-date" class="form-label">Pickup Date</label>
           <input type="date" class="form-control" id="pickup-date" required>
@@ -37,9 +37,7 @@
           <input type="time" class="form-control" id="pickup-time" required>
         </div>
       </div>
-
       <div class="row">
-        
         <div class="col-md-3 mb-3">
           <label for="dropoff-date" class="form-label">Drop-off Date</label>
           <input type="date" class="form-control" id="dropoff-date" required>
@@ -48,55 +46,51 @@
           <label for="dropoff-time" class="form-label">Drop-off Time</label>
           <input type="time" class="form-control" id="dropoff-time" required>
         </div>
-
-        
         <div class="col-md-6 d-flex align-items-end">
-          <button type="submit" class="btn btn-primary btn-block w-100">Search</button>
+          <button type="submit" class="btn btn-primary w-100">Search</button>
         </div>
       </div>
     </form>
   </div>
 </section>
 
-      <section class="dr">
+<!-- Daily Rides -->
+<section class="dr">
   <div class="container">
     <h2 class="text-center mb-4">Daily Rides</h2>
     <p class="text-center text-muted mb-5">Book your ride easily for daily travel needs</p>
 
     <div class="row">
-      
       <div class="col-md-4 mb-4">
-        <div class="card ride-card shadow-sm">
-          <img src="static/img/car 1.jpg" class="card-img-top" alt="Car 1">
+        <div class="card shadow-sm">
+          <img src="{% static 'img/car 1.jpg' %}" class="card-img-top" alt="Car 1">
           <div class="card-body text-center">
             <h5 class="card-title">Sedan - Toyota</h5>
-            <p class="card-text">Comfortable and fuel-efficient, perfect for city rides.</p>
+            <p>Comfortable and fuel-efficient, perfect for city rides.</p>
             <p class="price mb-2">₹1200 / day</p>
             <a href="#" class="btn btn-primary">Book Now</a>
           </div>
         </div>
       </div>
 
-      
       <div class="col-md-4 mb-4">
-        <div class="card ride-card shadow-sm">
-          <img src="static/img/car 2.jpg" class="card-img-top" alt="Car 2">
+        <div class="card shadow-sm">
+          <img src="{% static 'img/car 2.jpg' %}" class="card-img-top" alt="Car 2">
           <div class="card-body text-center">
             <h5 class="card-title">SUV - Mahindra</h5>
-            <p class="card-text">Spacious and powerful, ideal for family and long drives.</p>
+            <p>Spacious and powerful, ideal for family and long drives.</p>
             <p class="price mb-2">₹2000 / day</p>
             <a href="#" class="btn btn-primary">Book Now</a>
           </div>
         </div>
       </div>
 
-      
       <div class="col-md-4 mb-4">
-        <div class="card ride-card shadow-sm">
-          <img src="static/img/car3.jpg" class="card-img-top" alt="Car 3">
+        <div class="card shadow-sm">
+          <img src="{% static 'img/car3.jpg' %}" class="card-img-top" alt="Car 3">
           <div class="card-body text-center">
             <h5 class="card-title">Hatchback - Maruti</h5>
-            <p class="card-text">Compact and budget-friendly, perfect for daily commute.</p>
+            <p>Compact and budget-friendly, perfect for daily commute.</p>
             <p class="price mb-2">₹900 / day</p>
             <a href="#" class="btn btn-primary">Book Now</a>
           </div>
@@ -106,13 +100,7 @@
   </div>
 </section>
 
-            <img src="static/img/aaaaaaa.jpg"width = 1600px> 
-          </div>
-        </div>
-      </div>
-    </section>
-
-   <!-- About Us Section -->
+<!-- About Us -->
 <section id="about-us" class="about-us">
   <div class="container">
     <h2>About Us</h2>
@@ -128,82 +116,72 @@
   </div>
 </section>
 
+<section id="about-us">
+  <div class="container" id="vision-mission">
+    <h2 class="text-center mb-4">Our Vision & Mission</h2>
 
-            </p>
-              <section id="about-us">
-                <div class="container" id="vision-mission">
-  <h2 class="text-center mb-4">Our Vision & Mission</h2>
-
-  <div class="row">
-    <!-- Vision Section -->
-    <div class="col-md-6 mb-4">
-      <div class="p-4 shadow-sm border rounded bg-white h-100">
-        <h3 class="text-primary">Our Vision</h3>
-        <p>
-          At <strong>WHEELS ON</strong>, our vision is to redefine the future of mobility by making car booking simple, sustainable, and universally accessible.
-        </p>
-        <p>
-          We envision a world where every journey—whether across the city or across the country—is seamless, affordable, and driven by smart technology.
-        </p>
-        <p>
-          Our goal is to lead the transformation of car rental and ride services into a fully digital, customer-first experience that values trust, transparency, and environmental responsibility.
-        </p>
-        <h5 class="mt-3">Key Elements of Our Vision</h5>
-        <ul>
-          <li><strong>Innovation:</strong> Simplify booking with advanced tech.</li>
-          <li><strong>Accessibility:</strong> Transportation for everyone, anywhere.</li>
-          <li><strong>Sustainability:</strong> Promote eco-friendly mobility.</li>
-          <li><strong>Trust:</strong> Safe, reliable, and transparent service.</li>
-          <li><strong>Global Reach:</strong> A platform used worldwide.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Mission Section -->
-    <div class="col-md-6 mb-4">
-      <div class="p-4 shadow-sm border rounded bg-white h-100">
-        <h3 class="text-primary">Our Mission</h3>
-        <p>
-          Our mission is to make car bookings fast, flexible, and stress-free. We are committed to delivering exceptional travel experiences by offering a wide range of vehicles, transparent pricing, and 24/7 customer support.
-        </p>
-        <p>
-          Through continuous innovation and strong partnerships, we strive to ensure every ride booked through <strong>WHEELS ON</strong> is convenient, safe, and perfectly tailored to our users’ needs.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-  
-  <h3>Why Choose Us?</h3>
-  <ul>
-    <li>A wide selection of cars to suit every need and budget</li>
-    <li>Transparent pricing with no hidden fees</li>
-    <li>Flexible booking and cancellation options</li>
-    <li>24/7 customer support</li>
-    <li>Trusted by thousands of happy travelers</li>
-  </ul>
-
-  <p>
-    Let us help you get where you're going—quickly, comfortably, and affordably.
-  </p>
-
-  <p>
-    <strong>Your ride, your way.</strong><br>
-    Drive smarter with <strong>WHEELS ON</strong>.
-  </p>
-</section>
-
-            </p>
-          </div>
-                    </div>
+    <div class="row">
+      <!-- Vision Section -->
+      <div class="col-md-6 mb-4">
+        <div class="p-4 shadow-sm border rounded bg-white h-100">
+          <h3 class="text-primary">Our Vision</h3>
+          <p>
+            At <strong>WHEELS ON</strong>, our vision is to redefine the future of mobility by making car booking simple, sustainable, and universally accessible.
+          </p>
+          <p>
+            We envision a world where every journey—whether across the city or across the country—is seamless, affordable, and driven by smart technology.
+          </p>
+          <p>
+            Our goal is to lead the transformation of car rental and ride services into a fully digital, customer-first experience that values trust, transparency, and environmental responsibility.
+          </p>
+          <h5 class="mt-3">Key Elements of Our Vision</h5>
+          <ul>
+            <li><strong>Innovation:</strong> Simplify booking with advanced tech.</li>
+            <li><strong>Accessibility:</strong> Transportation for everyone, anywhere.</li>
+            <li><strong>Sustainability:</strong> Promote eco-friendly mobility.</li>
+            <li><strong>Trust:</strong> Safe, reliable, and transparent service.</li>
+            <li><strong>Global Reach:</strong> A platform used worldwide.</li>
+          </ul>
         </div>
       </div>
-    </section>
 
-    
+      <!-- Mission Section -->
+      <div class="col-md-6 mb-4">
+        <div class="p-4 shadow-sm border rounded bg-white h-100">
+          <h3 class="text-primary">Our Mission</h3>
+          <p>
+            Our mission is to make car bookings fast, flexible, and stress-free. We are committed to delivering exceptional travel experiences by offering a wide range of vehicles, transparent pricing, and 24/7 customer support.
+          </p>
+          <p>
+            Through continuous innovation and strong partnerships, we strive to ensure every ride booked through <strong>WHEELS ON</strong> is convenient, safe, and perfectly tailored to our users’ needs.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <h3 class="mt-5">Why Choose Us?</h3>
+    <ul>
+      <li>A wide selection of cars to suit every need and budget</li>
+      <li>Transparent pricing with no hidden fees</li>
+      <li>Flexible booking and cancellation options</li>
+      <li>24/7 customer support</li>
+      <li>Trusted by thousands of happy travelers</li>
+    </ul>
+
+    <p>
+      Let us help you get where you're going—quickly, comfortably, and affordably.
+    </p>
+
+    <p>
+      <strong>Your ride, your way.</strong><br>
+      Drive smarter with <strong>WHEELS ON</strong>.
+    </p>
+  </div>
+</section>
 
 
+<!-- Testimonials -->
 <section class="testimonials">
   <h2>What Our Customers Say</h2>
 
@@ -222,4 +200,127 @@
     <h4>– Vivek Kumar</h4>
   </div>
 </section>
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="{% url 'login' %}">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="login-username">Username</label>
+            <input type="text" class="form-control" id="login-username" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" class="form-control" id="login-password" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
+<!-- Signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Register</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="{% url 'register' %}">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="signup-username">Username</label>
+            <input type="text" class="form-control" id="signup-username" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" class="form-control" id="signup-email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" class="form-control" id="signup-password" name="password1" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-password2">Confirm Password</label>
+            <input type="password" class="form-control" id="signup-password2" name="password2" required>
+          </div>
+          <button type="submit" class="btn btn-success btn-block">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Login</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Enter password">
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Register</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form method="post">
+          {% csrf_token %}
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" class="form-control" placeholder="Enter name" name="username" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Enter email" name="email">
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Enter password" name="password">
+          </div>
+          <button type="submit" class="btn btn-success w-100">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS (should be at the bottom) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+{% endblock %}
